@@ -4,4 +4,14 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>SaveServlets</servlet-name>
+  	<display-name>SaveServlets</display-name>
+  	<description></description>
+  	<servlet-class>com.servlets.SaveServlets</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>SaveServlets</servlet-name>
+  	<url-pattern>/SaveServlets</url-pattern>
+  </servlet-mapping>
 </web-app>
