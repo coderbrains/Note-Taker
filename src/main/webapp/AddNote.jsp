@@ -22,7 +22,7 @@
 
 					<div class="card-body">
 
-						<form action="SaveServlets" method="post">
+						<form id= "reg-form" action="SaveServlets" method="post">
 							<div class="form-group">
 								<label for="title">Enter Title</label> <input name="title"
 									required="required" type="text" class="form-control" id="title"
@@ -36,12 +36,7 @@
 									id="content" name="content"
 									placeholder="Enter the content related to the title."></textarea>
 							</div>
-							<div class="form-check">
-								<input required="required" type="checkbox" class="form-check-input"
-									id="exampleCheck1"> <label class="form-check-label"
-									for="exampleCheck1">Check me out</label>
-							</div>
-
+							
 							<div class="container text-center">
 								<button type="submit" class="btn btn-primary">Submit</button>
 
@@ -58,5 +53,39 @@
 		</div>
 	</div>
 
+
+	<!-- <script>
+		
+	 $(document).ready(function () {
+         
+         
+         $('#reg-form').on('submit', function (event) {
+             event.preventDefault();
+             let form = new FormData(this);
+
+             $.ajax({
+                 url: "SaveServlets",
+                 type: "POST",
+                 data: form,
+                 success: function (data, textStatus, jqXHR) {
+                     console.log(data);
+                    
+                     swal("Good job!", "Your data has been saved!", "success");
+                         
+                     
+                 },
+                 error: function (jqXHR, textStatus, errorThrown) {
+                     console.log(jqXHR);
+                 },
+                 processData: false,
+                 contentType: false
+             });
+
+         })
+
+
+     });
+	
+	</script> -->
 </body>
 </html>
